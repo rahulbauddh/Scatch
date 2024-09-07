@@ -1,0 +1,44 @@
+<%- include('./partials/header')  %>
+<div class="w-full h-screen flex px-20 bg-blue-400">
+     <div class="w-1/2 h-screen flex items-center justify-center bg-zinc-400">
+        <div class="w-full px-32 bg-red-400">
+            <h3 class="text-4xl">welcome to <span class="text-blue-400 font-semibold">Scatch</span></h3>
+            <h4 class="text-2xl mb-5">create my account</h4>
+            <form autocomplete="off" action="/users/register" method="post">
+                <input 
+                class="bg-zinc-100 border-zinc-200 px-3 py-2 rounded-md mb-3 border-[1px] w-full"
+                type="text" placeholder="Full name" name="fullname">
+                <input 
+                     class="bg-zinc-100 border-zinc-200 px-3 py-2 rounded-md mb-3 block border-[1px] w-full"
+                     type="email" placeholder="Email" name="email">
+                 <input 
+                     class="bg-zinc-100 border-zinc-200 px-3 py-2 rounded-md mb-3 block border-[1px] w-full"
+                     type="password" placeholder="Password" name="password">
+                <input 
+                  class="rounded-full bg-blue-500 mt-2 px-5 py-2 text-white block"
+                 type="submit" value="create my account">
+
+            </form>
+        </div>
+     </div>
+     <div class="w-1/2 flex items-center justify-center h-screen bg-zinc-600">
+        <div class="w-full px-32 bg-green-400">
+            <h4 class="text-2xl  capitalize">login your account</h4>
+              <form autocomplete="off" method="post" action="/users/login">
+                  <input 
+                    class="px-3 py-2 block w-full rounded-md mb-3 border-zinc-200 bg-zinc-100 block border-[1px]"
+                     type="email" placeholder="Email" name="email">
+                     <input 
+                    class="px-3 py-2 block w-full rounded-md mb-3 border-zinc-200 bg-zinc-100 block border-[1px]"
+                     type="password" placeholder="Password" name="password">
+                     <input 
+                  class="rounded-full bg-blue-500 mt-2 px-5 py-1 block text-white"
+                 type="submit" value="Login">
+              </form>
+
+        </div>
+
+     </div>
+</div>
+
+<%- include('./partials/footer')%>

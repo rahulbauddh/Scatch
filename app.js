@@ -18,5 +18,10 @@ app.set("view engine", "ejs");
 app.use("/owners",ownersRouter);
 app.use("/users",usersRouter);
 app.use("/products",productsRouter);
+app.use("/",index);
+
+// app.get('/',(req,res)=>{
+//     res.render('createproducts');
+// })
 
 app.listen(3000);
