@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname,"path")));
 app.set("view engine", "ejs");
 
-app.use("/",ownersRouter);
+app.use("/owners",ownersRouter);
 app.use("/users",usersRouter);
 app.use("/products",productsRouter);
 
